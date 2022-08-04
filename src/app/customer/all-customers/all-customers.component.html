@@ -1,0 +1,40 @@
+<div class="container">
+    <img src="/assets/img/allbrokers.png" alt="img not found" style="float: center; width: 100%;">
+</div>
+<div class="container" align="center">
+    <h1>All Customer Records</h1>
+</div>
+<div align="center">
+    <p style="float: center; width: 50rem;">
+        <input class="form-control" name="search" [(ngModel)]="searchText" placeholder="Search here">
+    </p>
+</div>
+<hr>
+
+<div class="card-columns">
+    <div class="card mb-5 rounded border shadow-sm" align="center" *ngFor="let c of cust | filter:searchText">
+        <div class="card-header">
+            <div align="left">
+                <b>CustomerID:{{c.userId}}</b>
+                <b class="alert alert-danger" *ngIf="c.block==true; else elseBlock">  blocked</b>
+
+            </div>
+            <div align="right">
+                <button class="btn btn-danger btn-sm" (click)='deleteCustomer(c.userId)'><i
+                        class="bi bi-trash"></i></button>&nbsp;
+                <button class="btn btn-success btn-sm" [routerLink]="['/admin/customer/update',c.userId]"><i
+                        class="bi bi-pen"></i></button>
+            </div>
+        </div>
+        <div class="card-body" style="float: center;">
+            <img class="card-img-top" src="/assets/img/{{c.image}}" alt="img not found">
+            <h4 class="card-title">{{c.clientName}}</h4>
+            <p class="card-text"><i class="bi bi-telephone-fill"></i> +91{{c.mobile}}</p>
+            <p><i class="bi bi-envelope-fill"></i> {{c.email}}</p>
+        </div>
+        <div class="card-footer text-muted">
+            <i class="bi bi-geo-alt-fill"></i> {{c.city}}
+        </div>
+    </div>
+
+</div>

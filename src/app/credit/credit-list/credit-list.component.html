@@ -1,0 +1,43 @@
+
+<br>
+<div class="container" align="center" style="font-weight: bolder;"><h1>Credit Page</h1></div>
+<nav class="navbar navbar-expand-sm bg-success navbar-dark">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" routerLinkActive="active" [routerLink]="['/credit/all']">List Credit</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLinkActive="active" [routerLink]="['/credit/add']">Simulation Credit</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLinkActive="active" [routerLink]="['/credit/update']">update Credit</a>
+    </li>
+    
+  </ul>
+</nav>
+<router-outlet></router-outlet>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">credit id</th>
+        <th scope="col">finalamount</th>
+        <th scope="col">initialamount</th>
+        <th scope="col">monthly</th>
+        <th scope="col">credit formule id</th>
+        <th scope="col">export pdf</th>
+        <th scope="col">delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let credit of credits">
+        <th scope="row">{{credit.id}}</th>
+        <td>{{credit.finalamount}}</td>
+        <td>{{credit.initialamount}}</td>
+        <td>{{credit.monthly}}</td>
+        <td>{{credit.creditformula.id}}</td>
+        <td><button class="btn btn-primary" (click)="exportPDF(credit.id)">Export pdf</button></td>
+        <td><button class="btn btn-primary" (click)="deletecredit(credit.id)">delete</button></td>
+      </tr>
+
+    </tbody>
+  </table>

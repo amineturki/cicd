@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\customer",
+    "\\src\\app\\customer\\my-properties",
+    "\\src\\app\\developers",
+    "\\src\\app\\home",
+    "\\src\\app\\navbar",
+    "\\src\\app\\signup",
+    "\\src\\assets"
+  ],
+  "SelectedNode": "\\src\\app\\customer\\my-properties\\my-properties.component.html",
+  "PreviewInSolutionExplorer": false
+}

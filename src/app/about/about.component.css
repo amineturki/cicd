@@ -1,0 +1,471 @@
+/**
+* File Name: styles.css
+* Author: Sanjay Das
+*/
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  font-family: "Poppins", sans-serif;
+  color: #555555;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #000000;
+}
+
+a {
+  color: #000000;
+  transition: all 0.5s ease;
+}
+
+a:hover {
+  color: #2eca6a;
+  text-decoration: none;
+}
+
+.link-two {
+  color: #000000;
+  transition: all 0.5s ease;
+}
+
+.link-two:hover {
+  text-decoration: underline;
+  color: #000000;
+}
+
+.link-one {
+  color: #000000;
+  transition: all 0.5s ease;
+}
+
+.link-one:hover {
+  color: #000000;
+  text-decoration: none;
+}
+
+.link-icon {
+  color: #000000;
+  font-weight: 500;
+}
+
+.link-icon span {
+  font-size: 14px;
+  padding-left: 4px;
+  vertical-align: middle;
+}
+
+.link-a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .link-a {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .link-a {
+    font-size: 1rem;
+  }
+}
+
+.link-a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.link-a span {
+  font-size: 18px;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+@media (min-width: 768px) {
+  .link-a span {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .link-a span {
+    font-size: 18px;
+  }
+}
+
+.text-brand {
+  color: #000000;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  .text-brand {
+    font-size: 1.8rem;
+  }
+}
+
+.color-a {
+  color: #000000;
+}
+
+.color-b {
+  color: #2eca6a;
+}
+
+.color-d {
+  color: #adadad;
+}
+
+.color-text-a {
+  color: #555555;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+/*------/ Space Padding /------*/
+.section-t8 {
+  padding-top: 8rem;
+}
+
+@media (max-width: 767px) {
+  .section-t8 {
+    padding-top: 4rem;
+  }
+}
+
+.section-t4 {
+  padding-top: 4rem;
+}
+
+@media (max-width: 767px) {
+  .section-t4 {
+    padding-top: 2rem;
+  }
+}
+
+.section-t3 {
+  padding-top: 3rem;
+}
+
+@media (max-width: 767px) {
+  .section-md-t3 {
+    padding-top: 3rem;
+  }
+}
+
+.section-b2 {
+  padding-bottom: 2rem;
+}
+
+.section-tb85 {
+  padding: 8rem 0 5rem 0;
+}
+
+@media (max-width: 767px) {
+  .section-tb85 {
+    padding: 4rem 0 2.5rem 0;
+  }
+}
+/*======================================
+    //--//-->   BUTTON
+    ======================================*/
+.btn {
+  transition: 0.5s ease;
+}
+
+.btn.btn-a,
+.btn.btn-b {
+  border-radius: 0;
+  padding: 1rem 3rem;
+  letter-spacing: 0.05rem;
+}
+
+.btn.btn-a {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.btn.btn-a:hover {
+  background-color: #2eca6a;
+  color: #000000;
+}
+
+.btn.btn-b {
+  background-color: #2eca6a;
+  color: #000000;
+}
+
+.btn.btn-b:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.btn.btn-b-n {
+  background-color: #2eca6a;
+  color: #ffffff;
+  border-radius: 0;
+}
+
+.btn.btn-b-n:hover {
+  background-color: #26a356;
+  color: #ffffff;
+}
+
+/*------/ Intro Single /------*/
+.intro-single {
+  padding: 12rem 0 3rem;
+}
+
+@media (max-width: 767px) {
+  .intro-single {
+    padding-top: 9rem;
+  }
+}
+
+.intro-single .title-single-box {
+  padding: 1rem 0 1rem 2rem;
+}
+
+.intro-single .title-single-box {
+  border-left: 3px solid #2eca6a;
+}
+
+.intro-single .title-single-box .title-single {
+  font-weight: 600;
+  font-size: 2.2rem;
+}
+
+@media (min-width: 768px) {
+  .intro-single .title-single-box .title-single {
+    font-size: 2.1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .intro-single .title-single-box .title-single {
+    font-size: 2.5rem;
+  }
+}
+
+.intro-single .breadcrumb-box {
+  padding: 1rem 0 0 0.5rem;
+}
+
+.intro-single .breadcrumb {
+  background-color: transparent;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/*--------------------------------------------------------------
+    # Card General
+    --------------------------------------------------------------*/
+@media (max-width: 767px) {
+  .card-box-a,
+  .card-box-b,
+  .card-box-c,
+  .card-box-d {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .grid .card-box-a,
+  .grid .card-box-b,
+  .grid .card-box-c,
+  .grid .card-box-d {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.card-box-a,
+.card-box-b,
+.card-box-d {
+  position: relative;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card-box-a .img-a,
+.card-box-a .img-b,
+.card-box-b .img-a,
+.card-box-b .img-b {
+  transition: 0.8s all ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .card-box-a:hover .img-a,
+  .card-box-a:hover .img-b,
+  .card-box-b:hover .img-a,
+  .card-box-b:hover .img-b {
+    transform: scale(1.2);
+  }
+}
+
+@media (min-width: 768px) {
+  .card-box-a .price-a,
+  .card-box-b .price-a {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-box-a .price-a,
+  .card-box-b .price-a {
+    font-size: 1rem;
+  }
+}
+
+.card-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.card-shadow {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card-shadow:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.2) 27%,
+    rgba(0, 0, 0, 0.65) 90%
+  );
+}
+
+/*--------------------------------------------------------------
+    # About Section
+    --------------------------------------------------------------*/
+.section-about .title-vertical {
+  position: absolute;
+  letter-spacing: 0;
+  transform: rotate(-90deg);
+  top: 50px;
+  text-align: left;
+  font-size: 1.8rem;
+  width: 300px;
+  font-weight: 700;
+  text-align: right;
+}
+
+.about-img-box {
+  padding-left: 1rem;
+  position: relative;
+}
+
+@media (min-width: 576px) {
+  .about-img-box {
+    padding-left: 4rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .about-img-box {
+    padding-left: 5rem;
+  }
+}
+
+.sinse-box {
+  background-color: #2eca6a;
+  padding: 1rem 2rem;
+  position: absolute;
+  left: 15px;
+  bottom: 10px;
+}
+
+@media (min-width: 576px) {
+  .sinse-box {
+    padding: 1.5rem 2.5rem;
+    bottom: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .sinse-box {
+    padding: 1.5rem 3rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .sinse-box {
+    padding: 3rem 4.5rem;
+  }
+}
+
+.sinse-box .sinse-title {
+  font-weight: 700;
+  letter-spacing: 0.043em;
+  font-size: 1rem;
+}
+
+@media (min-width: 576px) {
+  .sinse-box .sinse-title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .sinse-box .sinse-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .sinse-box .sinse-title {
+    font-size: 2.2rem;
+  }
+}
+
+.sinse-box .sinse-title span {
+  position: absolute;
+}
+
+.sinse-box .sinse-title span:after {
+  content: " ";
+  width: 35px;
+  height: 2px;
+  background-color: #000000;
+  position: absolute;
+  bottom: -15px;
+}
+
+.sinse-box p {
+  margin-bottom: 0;
+  font-size: 0.7rem;
+}
+
+@media (min-width: 576px) {
+  .sinse-box p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .sinse-box p {
+    font-size: 1rem;
+  }
+}

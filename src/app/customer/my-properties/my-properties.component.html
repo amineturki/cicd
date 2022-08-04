@@ -1,0 +1,62 @@
+<br>
+<div class="container" align="center"><h3>My Properties</h3></div>
+<br>
+<div class="card-columns">
+    <div class="card mb-5 rounded border shadow-sm" align = "center" *ngFor="let p of properties">
+        <div class="card-header">
+            <div align="left">
+                <b>Etat: {{p.etat}}</b>
+            </div>
+            <div *ngIf="fileStatus.status==='progress'">
+                <div class="progress">
+                  <div [style.width.%]="fileStatus.percent" class="progress-bar progress-bar-animated bg-info" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                      {{ fileStatus.requestType }} {{ fileStatus.percent }} 
+                    </div>
+                </div>
+              </div>
+            <div align="right">
+                <button class="btn btn-success btn-sm" style="border-radius: 15px;" [routerLink]="['/customer/viewDeal',p.dealId]">View</button>
+                <button class="btn btn-danger btn-sm" style="border-radius: 15px;" (click)='delete(p.dealId)'><i
+                    class="bi bi-trash"></i>Delete</button>
+                <input type="file" *ngIf="p.etat == 'Please upload PDF File'"  class="btn btn-warning btn-sm" style="border-radius: 15px;" (change)="onUploadFiles($event.target.files,p.dealId)" name="files"  class="form-control"/>
+
+            </div>
+        </div>
+        <div class="card-body" style="float: center;">
+            <img class="card-img-top" src="../assets/img/MyProperty.png" style="width: 400px; height: 400px;" alt="img not found">
+            <h4 class="card-title"></h4>
+            <table>
+                <tr>
+                    <th>dealDate: </th>
+                    <td >{{p.dealDate}}</td>
+                </tr>
+                <tr>
+                    <th>agentName</th>
+                    <td>{{p.annonce.agent.agentName}}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="card-footer text-muted">
+            <div class="container" align="left">
+                <table>
+                    <tr>
+                        <th>Address: </th>
+                        <td>{{p.annonce.address}}</td>
+                    </tr>
+                    <tr>
+                        <th>Street: </th>
+                        <td>{{p.annonce.street}}</td>
+                    </tr>
+                    <tr>
+                        <th>City: </th>
+                        <td>{{p.annonce.city}}</td>
+                    </tr>
+                </table>
+            </div>
+            <div align="right">
+                <h4>&#8377; {{p.dealCost}}</h4>
+            </div>
+        </div>
+    </div>
+  
+</div>

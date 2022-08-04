@@ -1,0 +1,102 @@
+<style>
+    th,
+    td {
+        text-align: center;
+    }
+</style>
+<div class="container" align="Center">
+    <img src="../assets/img/propertyre.jpg" style="float: center; width: 100%;">
+</div>
+<br><br>
+<div align="center">
+    <a [routerLink]="['../create']"><button class="btn btn-info"><i class="bi bi-file-earmark-plus-fill"></i>Create
+            Property</button></a>&nbsp;&nbsp;
+    <a [routerLink]="['../updateuser']"><button class="btn btn-dark"><i class="bi bi-file-person"></i>My Profile</button></a>
+</div>
+<hr>
+
+<div class="card-columns">
+    <div class="card mb-5 rounded border shadow-sm" align="center" *ngFor="let p of properties">
+        <div class="card-header">
+            <div align="left">
+                <b>Annonce ID:{{p.annonceId}}</b>
+            </div>
+            <div align="right">
+                <button class="btn btn-danger btn-sm" (click)='delete(p.annonceId)'><i
+                        class="bi bi-trash"></i></button>&nbsp;
+                <button class="btn btn-success btn-sm" [routerLink]="['/broker/updating',p.annonceId]"><i
+                        class="bi bi-pen"></i></button>
+            </div>
+        </div>
+        <div class="card-body">
+            <img class="card-img-top" src="../assets/img/{{p.image}}" alt="img not found">
+            <ng-container *ngIf="p.status; then loggedIn; else loggedOut"></ng-container>
+        <ng-template #loggedIn>
+            <h4 class="card-title">{{p.configuration}}&nbsp; <button class="btn btn-success btn-sm"><i
+                        class="bi bi-check-circle"></i></button></h4>
+        </ng-template>
+        <ng-template #loggedOut>
+            <h4 class="card-title">{{p.configuration}}&nbsp; <button class="btn btn-danger btn-sm"><i
+                        class="bi bi-check-circle"></i></button></h4>
+        </ng-template>
+        <table class="card-text">
+            <tr>
+                <th align="left">Offer:</th>
+                <td align="left">{{p.offerType}}</td>
+            </tr>
+            <tr>
+                <th align="left">Area:</th>
+                <td align="left">{{p.areaSqft}}sq.ft.</td>
+            </tr>
+            <tr>
+                <th align="left">Address:</th>
+                <td align="left">{{p.address}},&nbsp;&nbsp;{{p.street}}</td>
+            </tr>
+        </table>
+        </div>
+        <div class="card-footer text-muted">
+            <div align="left">
+                <i class="bi bi-geo-alt-fill"></i> {{p.city}}
+            </div>
+            <div align="right">
+                <h4>&#8377; {{p.offerCost}}/-</h4>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<!-- <hr>
+
+<h2>My Properties</h2>
+<div class="container">
+    <table border="1">
+        <tr>
+            <th>Property Id</th>
+            <th>Configuration</th>
+            <th>Offer Type</th>
+            <th>Offer Cost</th>
+            <th>Area in square feet</th>
+            <th>City</th>
+            <th>Address</th>
+            <th>Street</th>
+            <th>Status</th>
+            <th colspan="2">Action</th>
+        </tr>
+        <tr *ngFor='let p of properties'>
+            <td>{{p.annonceId}}</td>
+            <td>{{p.configuration}}</td>
+            <td>{{p.offerType}}</td>
+            <td>{{p.offerCost}}</td>
+            <td>{{p.areaSqft}}</td>
+            <td>{{p.city}}</td>
+            <td>{{p.address}}</td>
+            <td>{{p.street}}</td>
+            <td>{{p.status}}</td>
+            <td><button class="btn btn-success btn-sm" [routerLink]="['/broker/updating',p.annonceId]">Update</button></td>
+            <td><button class="btn btn-danger btn-sm" (click)='delete(p.annonceId)'>Delete</button></td>
+        </tr>
+    </table>
+</div> -->

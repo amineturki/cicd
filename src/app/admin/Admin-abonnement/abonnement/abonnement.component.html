@@ -1,0 +1,53 @@
+<div class="mat-elevation-z8 demo-table">
+  <h3>Liste des abonnements</h3>
+  <mat-form-field mat-header-cell appearance="standard">
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Search columns" #input>
+  </mat-form-field>
+
+
+  <table mat-table [dataSource]="dataSource"  >
+    <!-- id Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>id.</th>
+      <td mat-cell *matCellDef="let element">{{element.id}}</td>
+    </ng-container>
+
+    <!-- typeAbonnement Column -->
+    <ng-container matColumnDef="typeAbonnement">
+      <th mat-header-cell *matHeaderCellDef>Type abonnement</th>
+      <td mat-cell *matCellDef="let element">{{element.typeAbonnement}}</td>
+    </ng-container>
+
+    <!-- nombreAnnonce Column -->
+    <ng-container matColumnDef="nombreAnnonce">
+
+      <th mat-header-cell *matHeaderCellDef>Nombre annonces</th>
+      <td mat-cell *matCellDef="let element">{{element.nombreAnnonce}}</td>
+    </ng-container>
+    <!-- nombreAnnonce Column -->
+    <ng-container matColumnDef="Action">
+
+      <th mat-header-cell *matHeaderCellDef>Action</th>
+      <td mat-cell *matCellDef="let element"><button mat-button color="accent" (click)="deleteAbonnement(element.id)">Supprimer</button></td>
+    </ng-container>
+
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row
+        (click)="clickedRows.add(row)"
+        [class.demo-row-is-clicked]="clickedRows.has(row)"
+        *matRowDef="let row; columns: displayedColumns;">
+    </tr>
+  </table>
+  <div class="container">
+    <mat-paginator [pageSizeOptions]="[2, 4, 6]"
+                   showFirstLastButtons
+                   aria-label="Select page of periodic elements">
+    </mat-paginator>
+  </div>
+
+  <button mat-button (click)="redirect ()">ajouter</button>
+</div>
+

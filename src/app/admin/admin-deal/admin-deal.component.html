@@ -1,0 +1,52 @@
+<style>
+    th, td{
+        text-align: center;
+    }
+</style>
+<div class="container" align="center">
+    <h3>All Annonces</h3>
+</div>
+<hr>
+
+<div class="card-columns">
+    <div class="card mb-5 rounded border shadow-sm" align = "center" *ngFor="let d of deals">
+        <div class="card-header">
+            <div align="left">
+                <b>Deal ID:{{d.dealId}}</b>
+            </div>
+        </div>
+        <div class="card-body">
+            <img class="card-img-top" src="../assets/img/Deal.png" alt="img not found">
+            <table class="table table-borderless">
+                
+            </table>
+            <table class="table table-borderless">
+                <tr>
+                    <th align="left">annonce Id</th>
+                    <td align="left">{{d.annonce.annonceId}}</td>
+                </tr> 
+                <tr>
+                    <th align="left">annonce type</th>
+                    <td align="left">{{d.annonce.configuration}}</td>
+                </tr> 
+                <tr>
+                    <th align="left">etat</th>
+                    <td align="left">{{d.etat}}</td>
+                </tr> 
+                <tr>
+                    <th align="left">Deal Date</th>
+                    <td align="left">{{d.dealDate | date:'yyyy-MM-dd'}}</td>
+                </tr>
+                <tr>
+                    <th align="left">Deal Cost</th>
+                    <td align="left">{{d.dealCost}}</td>
+                </tr>
+            </table>
+                
+                
+        </div>
+        <div class="card-footer text-muted">
+        </div>
+    </div>
+  
+</div>

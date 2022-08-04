@@ -1,0 +1,30 @@
+#addform
+{
+  margin-top:20px;
+    width:100%
+}
+
+button {
+  background: #417D7A;
+  border-radius: 5px;
+  color: white;
+  font-weight: 400;
+  width: 100%;
+  height: 45px;
+  font-size: 16px;
+  font-family: 'Roboto';
+ }
+ button:hover{
+  background-color: rgb(29, 29, 218);
+}
+
+.form-submit-button {
+  background: #417D7A;
+  color: white;
+  border-style: outset;
+  border-color: #0066A2;
+  height: 50px;
+  width: 100px;
+  font: bold 15px arial, sans-serif;
+  text-shadow: none;
+}

@@ -1,0 +1,39 @@
+
+  <div class="container" id="addform">
+    <form>
+  
+  
+      <h3>Ajouter un abonnement</h3>
+  
+      <div class="row">
+  
+        <mat-form-field appearance="fill">
+          <mat-label>Libelle</mat-label>
+          <input matInput type="text"  [(ngModel)]="Abonnement.typeAbonnement" name="typeAbonnement" class="example-right-align" placeholder="Silver,Gold ..." ngModel>
+        </mat-form-field>
+  
+  
+        <mat-form-field appearance="fill">
+          <mat-label>Nombre annonce</mat-label>
+          <input matInput type="number" [(ngModel)]="Abonnement.nombreAnnonce" name="nombreAnnonce" class="example-right-align" placeholder="0" ngModel>
+          <span matSuffix>Maximum</span>
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill">
+          <mat-label>Prix</mat-label>
+          <input matInput type="number"  [(ngModel)]="Abonnement.prix" name="prix" class="example-right-align" placeholder="0" ngModel>
+          <span matSuffix>Dt</span>
+        </mat-form-field>
+  
+  
+  
+  
+  
+        <input class="form-submit-button" mat-button type="submit" (click)="onClickSubmit()">
+  
+      </div>
+    </form>
+  </div>
+  
+  
+  

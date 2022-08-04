@@ -1,0 +1,24 @@
+.mat-header-cell {
+    justify-content: center;
+    text-align: center;
+  }
+  .demo-table {
+    width: 60%;
+    margin-left:20%;
+    text-align:center;
+  }
+  
+  .mat-row .mat-cell {
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+    border: 1px solid #808080;
+    justify-content: center;
+  }
+  
+  .mat-row:hover .mat-cell {
+    border-color: currentColor;
+  }
+  table {
+    width: 100%;
+  }
+  

@@ -1,0 +1,48 @@
+<!-- <style>
+    .tc {
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+</style> -->
+
+<div class="container">
+    <img src="/assets/img/allbrokers.png" alt="img not found" style="float: center; width: 100%;">
+</div>
+<div align="center">
+    <table>
+        <tr>
+            <th><i class="bi bi-search"></i></th>
+            <td><input style="float: center; width: 50rem;" class="form-control" name="search" [(ngModel)]="searchText" placeholder="Search here"></td>
+        </tr>
+    </table>
+</div>
+<hr>
+
+<div class="card-columns">
+    <div class="card mb-5 rounded border shadow-sm" align="center" *ngFor="let b of broks | filter:searchText">
+        <div class="card-header">
+            <div align="left">
+                <b>AgentID:{{b.userId}}  </b>
+                <b class="alert alert-danger" *ngIf="b.block==true; else elseBlock">  blocked</b>
+            </div>
+            <div align="right">
+                <button class="btn btn-danger btn-sm" (click)='delete(b.userId)'><i
+                        class="bi bi-trash"></i></button>&nbsp;
+                <button class="btn btn-success btn-sm" [routerLink]="['/admin/broker/update',b.userId]"><i
+                        class="bi bi-pen"></i></button>
+            </div>
+        </div>
+        <div class="card-body" style="float: center;">
+            <img class="card-img-top" src="/assets/img/{{b.image}}" alt="img not found">
+            <h4 class="card-title">{{b.agentName}}</h4>
+            <p class="card-text"><i class="bi bi-telephone-fill"></i> +91{{b.mobile}}</p>
+            <p><i class="bi bi-envelope-fill"></i> {{b.email}}</p>
+        </div>
+        <div class="card-footer text-muted">
+            <i class="bi bi-geo-alt-fill"></i> {{b.city}}
+        </div>
+    </div>
+
+</div>

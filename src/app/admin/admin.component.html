@@ -1,0 +1,25 @@
+<br>
+<div class="container" align="center" style="font-weight: bolder;">
+  <h1>Admin Page</h1>
+</div>
+<nav class="navbar navbar-expand-sm bg-success navbar-dark">
+  <ul class="navbar-nav">
+    <li class="nav-item" style="padding-right: 10px;">
+      <a class="nav-link" routerLinkActive="active" [routerLink]="['/admin/broker']">Agent</a>
+    </li>
+    <li class="nav-item" style="padding-right: 10px;">
+      <a class="nav-link" routerLinkActive="active" [routerLink]="['/admin/customer']">Client</a>
+    </li>
+    <li class="nav-item" style="padding-right: 10px;">
+      <a class="nav-link" routerLinkActive="active" [routerLink]="['/admin/deal']">Deal</a>
+    </li>
+    <li class="nav-item" style="padding-right: 10px;">
+      <a class="nav-link" routerLinkActive="active" [routerLink]="['/admin/property']">Annonce</a>
+    </li>
+    <li class="nav-item" style="padding-right: 10px;">
+      <a class="nav-link" routerLinkActive="active" [routerLink]="['/admin/abonnement']">Abonnement</a>
+    </li>
+  </ul>
+</nav>
+
+<router-outlet></router-outlet>

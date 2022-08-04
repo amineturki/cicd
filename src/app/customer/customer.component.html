@@ -1,0 +1,19 @@
+<br>
+<div class="container" align="center" style="font-weight: bolder;"><h1>Client Page</h1></div>
+<nav class="navbar navbar-expand-sm bg-success navbar-dark">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" routerLinkActive="active" [routerLink]="['/customer/search']">Search Annonces</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLinkActive="active" [routerLink]="['/customer/criteria']">List of Annonces</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLinkActive="active" [routerLink]="['/customer/myprops']">My Annonces</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLinkActive="active" [routerLink]="['/customer/update']">Update my details</a>
+    </li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>

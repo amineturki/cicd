@@ -1,0 +1,26 @@
+<style>
+  .center {
+    text-align: center;
+  }
+</style>
+<br>
+<div class="container" align="center" style="font-weight: bolder;"><h1>Agent Page</h1></div>
+<nav class="navbar navbar-expand-sm bg-success navbar-dark">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" routerLinkActive="active" [routerLink]="['./myprops']"><button class="btn btn-warning"><i class="bi bi-house-fill"></i></button></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLinkActive="active" [routerLink]="['./my-deals']"><button class="btn btn-warning"><i class="bi bi-building">Deals</i></button></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLinkActive="active" [routerLink]="['./my-dashboard']"><button class="btn btn-warning"><i class="bi bi-clipboard-data">Dashboard</i></button></a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" routerLinkActive="active" [routerLink]="['./abonnement']"><button class="btn btn-warning"><i class="bi bi-clipboard-data">Abonnement</i></button></a>
+    </li>
+  </ul>
+</nav>
+<hr>
+<router-outlet></router-outlet>
