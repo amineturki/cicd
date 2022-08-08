@@ -6,7 +6,25 @@ on:
       - 'main'
 
 jobs:
-  build:
+  Test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm ci
+      - run: npm run test:prod
+      - run: npm run lint
+    
+  Build:
+    needs: [  Test  ]
     runs-on: ubuntu-latest
     steps:
       -
@@ -31,9 +49,9 @@ jobs:
           context: .
           push: true
           tags: amineturki/angular:latest
-  deploy:
+  Deploy:
     name: Deploy
-    needs: [  build ]
+    needs: [  Test , Build ]
     runs-on: ubuntu-latest
     steps:
       - name: Set the Kubernetes context
