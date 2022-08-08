@@ -20,6 +20,8 @@ spec:
     spec:
       containers:
       - name: front
-        image: amineturki/front:latset
+        image: ghcr.io/amineturki/front:latset
         ports:
         - containerPort: 80
+      imagePullSecrets:
+        - name: github-container-registry
