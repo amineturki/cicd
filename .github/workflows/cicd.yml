@@ -54,4 +54,9 @@ jobs:
             front_deployment.yml
             front_service.yml
           images: |
-            ghcr.io/amineturki/angular:${{ github.sha }}      
+            ghcr.io/amineturki/angular:${{ github.sha }}     
+      - name: test deployment 
+        run: |
+           kubectl get po -o wide
+           kubectl get deployment 
+           kubectl get service
