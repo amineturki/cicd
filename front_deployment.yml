@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: front
-        image: ghcr.io/amineturki/front:latset
+        image: ghcr.io/amineturki/angular:latest
         ports:
         - containerPort: 80
       imagePullSecrets:
