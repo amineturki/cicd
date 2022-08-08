@@ -6,7 +6,7 @@ on:
       - 'main'
 
 jobs:
-  docker:
+  build:
     runs-on: ubuntu-latest
     steps:
       -
@@ -31,3 +31,14 @@ jobs:
           context: .
           push: true
           tags: amineturki/angular:latest
+  deploy:      
+    name: Deploy
+    needs: [ test, build ]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set the Kubernetes context
+        uses: azure/k8s-set-context@v2
+        with:
+          method: service-account
+          k8s-url: https://testenv-dns-b6167a5c.hcp.eastus.azmk8s.io:443
+          k8s-secret: ${{ secrets.KUBERNETES_SECRET }}
