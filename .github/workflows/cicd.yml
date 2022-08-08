@@ -51,7 +51,7 @@ jobs:
         with:
           namespace: default
           manifests: |
-            front_deployment.yaml
-            front_service.yaml
+            front_deployment.yml
+            front_service.yml
           images: |
             ghcr.io/amineturki/angular:${{ github.sha }}      
