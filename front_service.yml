@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: front-service
+  labels:
+    name: front-service
+    app: demo-front-app
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 80
+    nodePort: 30007
+  selector:
+    name: front-app-pod
+    app: demo-front-app
+    
+#LoadBalancer
+#nodePort: 30007 na7iha
+## pour acceder externel ip 
+
+
+#NodePort
+#nodePort: 30007 avec
+## acceder a 127.0.0.1:30007

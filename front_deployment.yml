@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: front-deployment
+  labels:
+    app: front-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: front-app-pod
+      app: demo-front-app
+  template:
+    metadata:
+      name: front-app-pod
+      labels:
+        name: front-app-pod
+        app: demo-front-app
+
+    spec:
+      containers:
+      - name: front
+        image: amineturki/front:latset
+        ports:
+        - containerPort: 80
